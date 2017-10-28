@@ -38,6 +38,8 @@ int main()
         hotel(budget,rating,sec);
     else if(strcmp(interest,"hospital")==0)
         hospital(sec,rating);
+    else if(strcmp(interest,"restaurant")==0)
+        restaurant(sec,rating);
         
     return 0;
 
