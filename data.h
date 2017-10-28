@@ -33,7 +33,7 @@ void hotel(int price,float rating,int sector)
 	
 	for(i=0;i<11;i++)
 	{
-		if(sector==hotel_sector[i]&&rating<=hotel_rating[i]&&price>=hotel_price[i])
+		if(sector==hotel_sector[i]&&rating<=hotel_rating[i]&&price>=hotel_price[i]&&strcmp("Not Available",time_comp(hotel_open[i],hotel_close[i])))
 		{
 			
 			printf("%-25s %d",hotel_name[i],hotel_sector[i]);

@@ -14,7 +14,7 @@ char* time_comp(int ti_o, int ti_c)
 	hrs += (he[12]-'0');
 	if(ti_o<=hrs && ti_c>=hrs)
 		return "Available";
-	else 
+	else
 		return "Not Available";
 }
 
