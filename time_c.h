@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void time_comp(int ti_o, int ti_c)
+char* time_comp(int ti_o, int ti_c)
 {
 	time_t ti;
     time(&ti); 
@@ -13,8 +13,8 @@ void time_comp(int ti_o, int ti_c)
 	hrs = (he[11]-'0')*10;
 	hrs += (he[12]-'0');
 	if(ti_o<=hrs && ti_c>=hrs)
-		cout << "Available" << endl;
+		return "Available";
 	else 
-		cout << "Not Available" << endl;
+		return "Not Available";
 }
 
