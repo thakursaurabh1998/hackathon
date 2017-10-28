@@ -35,9 +35,27 @@ void hotel(int price,float rating,int sector)
 	{
 		if(sector==hotel_sector[i]&&rating<=hotel_rating[i]&&price>=hotel_price[i]&&strcmp("Not Available",time_comp(hotel_open[i],hotel_close[i])))
 		{
-			
 			printf("%-25s %d",hotel_name[i],hotel_sector[i]);
 			printf(" %.1f %d %s\n",hotel_rating[i],hotel_price[i],time_comp(hotel_open[i],hotel_close[i]));
+		}
+	}
+	
+}
+void restaurant(int price,float rating,int sector)
+{
+	int i,price[11]={1000,300,200,400,350,550,800,700,380,250,150}
+	int sector[11]={21,21,21,20,20,20,34,34,34,35,35,35};
+	char rest_name[11][30]={"Kailash Restaurant","Flames Restaurant","Eating Joint","Ghazal Restauranr","Prince Restaurant","Gusto Cafe","Nukkar Dhaba","Muskan Restaurant","Swagath Restaurant","Novelty Restaurant","7ven 11ven Restaurant"};
+	float rest_rating[11]={3,4,5,4.4,3.9,2.8,1.5,4.4,5,3};
+	int rest_open[11]={7,8,9,8,10,11,8,9,10,10,8};
+	int rest_close[11]={22,21,22,23,24,23,23,22,22,23,24+2};
+	for(i=0;i<11;i++)
+	{
+		if(sector==rest_sector[i]&&rating<=rest_rating[i]&&price>=rest_price[i]&&strcmp("Not Available",time_comp(rest_open[i],rest_close[i]))
+		{
+		
+			printf("%-25s %d",rest_name[i],rest_sector[i]);
+			printf(" %.1f %d %s\n",rest_rating[i],rest_price[i],time_comp(rest_open[i],rest_close[i]));
 		}
 	}
 }
