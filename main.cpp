@@ -13,17 +13,17 @@ int main()
     strlwr(city);
     int flag=0;
     if(strcmp("chandigarh",city)==0)
-    	cout <<"Enter Sector: ";
+    	cout <<"Enter Sector(34/20/35/21): ";
 	else
 	{
-        cout << "Sorry, city not available.";
+        cout << "Sorry, city not available. Only Chandigarh is available.";
         return 1;
     }
     int sec,budget;
     char* interest = (char*)malloc(sizeof(char)*30);
     float rating;
     cin >> sec;
-    cout << "Your service of interest: " ;
+    cout << "Your service of interest(hotel/restaurant/hospital): " ;
     cin >> interest;
     strlwr(interest);
     if(strcmp(interest,"hospital")!=0)
@@ -39,7 +39,7 @@ int main()
     else if(strcmp(interest,"hospital")==0)
         hospital(sec,rating);
     else if(strcmp(interest,"restaurant")==0)
-        restaurant(sec,rating);
+        restaurant(budget,rating,sec);
         
     return 0;
 
